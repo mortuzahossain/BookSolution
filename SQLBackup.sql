@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [BookDB]    Script Date: 1/27/2021 5:23:37 PM ******/
+/****** Object:  Database [BookDB]    Script Date: 1/27/2021 5:52:37 PM ******/
 CREATE DATABASE [BookDB]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -80,7 +80,7 @@ ALTER DATABASE [BookDB] SET QUERY_STORE = OFF
 GO
 USE [BookDB]
 GO
-/****** Object:  Table [dbo].[Books]    Script Date: 1/27/2021 5:23:37 PM ******/
+/****** Object:  Table [dbo].[Books]    Script Date: 1/27/2021 5:52:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,7 +101,7 @@ CREATE TABLE [dbo].[Books](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Category]    Script Date: 1/27/2021 5:23:37 PM ******/
+/****** Object:  Table [dbo].[Category]    Script Date: 1/27/2021 5:52:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1629,6 +1629,530 @@ GO
 INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (504, N'Bikel Belar Golpo', N'Bikel Belar Golpo', NULL, N'https://www.amarbooks.org/thumbs/1464934227.jpg', N'0.16 MB
 ', N'http://www.amarbooks.com/FreeDownload.php?w=Anisul%20Haque&f=Bikel%20Belar%20Golpo.pdf', 13, NULL)
 GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (505, N'Shorgo Nagorir Chabi', N'Shorgo Nagorir Chabi', NULL, N'https://www.amarbooks.org/thumbs/1466832045.jpg', N'0.96 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Shorgo%20Nagorir%20Chabi.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (506, N'Ordhek Jibon', N'Ordhek Jibon', NULL, N'https://www.amarbooks.org/thumbs/1465199054.jpg', N'27.05 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Ordhek%20Jibon.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (507, N'Sonar Mukut Theke', N'Sonar Mukut Theke', NULL, N'https://www.amarbooks.org/thumbs/1466832323.jpg', N'0.69 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sonar%20Mukut%20Theke.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (508, N'Bishwa Mamar Goyendagiri', N'Bishwa Mamar Goyendagiri', NULL, N'https://www.amarbooks.org/thumbs/1465213540.jpg', N'13.12 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Bishwa%20Mamar%20Goyendagiri.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (509, N'Paromita', N'Paromita', NULL, N'https://www.amarbooks.org/thumbs/1466757146.jpg', N'2.13 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Paromita.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (510, N'Jagoran Hemborno', N'Jagoran Hemborno', NULL, N'https://www.amarbooks.org/thumbs/1466832101.jpg', N'0.84 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Jagoran%20Hemborno.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (511, N'Sunil Er Shrestha Kobita', N'Sunil Er Shrestha Kobita', NULL, N'https://www.amarbooks.org/thumbs/1466757204.jpg', N'2.64 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sunil%20Er%20Shrestha%20Kobita.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (512, N'Kishor Kalpobigyan Samagra', N'Kishor Kalpobigyan Samagra', NULL, N'https://www.amarbooks.org/thumbs/1465213680.jpg', N'36.8 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kishor%20Kalpobigyan%20Samagra.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (513, N'Kakababur Chokhe Jol', N'Kakababur Chokhe Jol', NULL, N'https://www.amarbooks.org/thumbs/1466840730.jpg', N'3.02 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kakababur%20Chokhe%20Jol.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (514, N'Ratrir Radevu', N'Ratrir Radevu', NULL, N'https://www.amarbooks.org/thumbs/1466833994.jpg', N'1.16 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Ratrir%20Radevu.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (515, N'Ashei Daibo Picnickey', N'Ashei Daibo Picnickey', NULL, N'https://www.amarbooks.org/thumbs/1466832170.jpg', N'1.05 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Ashei%20Daibo%20Picnickey.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (516, N'Kakababu aar Bagher Golpo', N'Kakababu aar Bagher Golpo', NULL, N'https://www.amarbooks.org/thumbs/1466840707.jpg', N'3.19 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kakababu%20aar%20Bagher%20Golpo.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (517, N'Nilloheter Chena Ochena', N'Nilloheter Chena Ochena', NULL, N'https://www.amarbooks.org/thumbs/1466849380.jpg', N'6.33 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Nilloheter%20Chena%20Ochena.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (518, N'Prothom-alo-01', N'Prothom-alo-01', NULL, N'https://www.amarbooks.org/thumbs/1465208275.jpg', N'25.76 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Prothom-alo-01.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (519, N'Dunga', N'Dunga', NULL, N'https://www.amarbooks.org/thumbs/1465213570.jpg', N'2.46 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Dunga.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (520, N'Suniler Sera 101', N'Suniler Sera 101', NULL, N'https://www.amarbooks.org/thumbs/1465201871.jpg', N'49.29 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Suniler%20Sera%20101.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (521, N'"Sontu Kothay', N'"Sontu Kothay', NULL, N'Sunil Gangopadhyay', N'"http://www.amarbooks.com/FreeDownload.php?w=Sunil', N'https://www.amarbooks.org/thumbs/1466836307.jpg', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (522, N'Bishakha', N'Bishakha', NULL, N'https://www.amarbooks.org/thumbs/1464949547.jpg', N'4.5 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Bishakha.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (523, N'Kabita Samagra-1', N'Kabita Samagra-1', NULL, N'https://www.amarbooks.org/thumbs/1466760995.jpg', N'7.02 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kabita%20Samagra-1.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (524, N'Sudur Jharnar Jale', N'Sudur Jharnar Jale', NULL, N'https://www.amarbooks.org/thumbs/1464949674.jpg', N'3.91 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sudur%20Jharnar%20Jale.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (525, N'Dristikone', N'Dristikone', NULL, N'https://www.amarbooks.org/thumbs/1466849601.jpg', N'9.7 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Dristikone.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (526, N'Shikhor Theke Shikhore', N'Shikhor Theke Shikhore', NULL, N'https://www.amarbooks.org/thumbs/1465213709.jpg', N'4.35 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Shikhor%20Theke%20Shikhore.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (527, N'Batashe Kisher Dak Sono', N'Batashe Kisher Dak Sono', NULL, N'https://www.amarbooks.org/thumbs/1466833927.jpg', N'1 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Batashe%20Kisher%20Dak%20Sono.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (528, N'Swarger Niche Manush', N'Swarger Niche Manush', NULL, N'https://www.amarbooks.org/thumbs/1465208380.jpg', N'2.98 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Swarger%20Niche%20Manush.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (529, N'Ruhan Ruhan', N'Ruhan Ruhan', NULL, N'https://www.amarbooks.org/thumbs/1466683423.jpg', N'4.9 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Ruhan%20Ruhan.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (530, N'Kakababu O Moronphad', N'Kakababu O Moronphad', NULL, N'https://www.amarbooks.org/thumbs/1466838479.jpg', N'5.81 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kakababu%20O%20Moronphad.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (531, N'Animan', N'Animan', NULL, N'https://www.amarbooks.org/thumbs/1466683124.jpg', N'2.26 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Animan.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (532, N'Tukunjil', N'Tukunjil', NULL, N'https://www.amarbooks.org/thumbs/1489141930.jpg', N'1.48 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Tukunjil.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (533, N'Kakababu O Chandan Dossu', N'Kakababu O Chandan Dossu', NULL, N'https://www.amarbooks.org/thumbs/1466838405.jpg', N'5.79 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kakababu%20O%20Chandan%20Dossu.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (534, N'Sada Sidhe Kotha', N'Sada Sidhe Kotha', NULL, N'https://www.amarbooks.org/thumbs/1466683458.jpg', N'1.3 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Sada%20Sidhe%20Kotha.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (535, N'Sonali Dukkho', N'Sonali Dukkho', NULL, N'https://www.amarbooks.org/thumbs/1465213734.jpg', N'3.22 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sonali%20Dukkho.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (536, N'Hat Kanta Robin', N'Hat Kanta Robin', NULL, N'https://www.amarbooks.org/thumbs/1528876965.jpg', N'5.72 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Hat%20Kanta%20Robin.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (537, N'Sei Somoy', N'Sei Somoy', NULL, N'https://www.amarbooks.org/thumbs/1465202979.jpg', N'33.83 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sei%20Somoy.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (538, N'Muktijuddher Itihas', N'Muktijuddher Itihas', NULL, N'https://www.amarbooks.org/thumbs/1466670591.jpg', N'3.2 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Muktijuddher%20Itihas.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (539, N'Nillohiter Chokher Samne', N'Nillohiter Chokher Samne', NULL, N'https://www.amarbooks.org/thumbs/1466849238.jpg', N'9.7 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Nillohiter%20Chokher%20Samne.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (540, N'Beji', N'Beji', NULL, N'https://www.amarbooks.org/thumbs/1468404744.jpg', N'1.99 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Beji.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (541, N'Bokulappu', N'Bokulappu', NULL, N'https://www.amarbooks.org/thumbs/1489120755.jpg', N'10.34 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Bokulappu.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (542, N'Bondi Jege Aso', N'Bondi Jege Aso', NULL, N'https://www.amarbooks.org/thumbs/1466834099.jpg', N'1.12 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Bondi%20Jege%20Aso.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (543, N'Fobianer Jatri', N'Fobianer Jatri', NULL, N'https://www.amarbooks.org/thumbs/1464944489.jpg', N'0.37 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Fobianer%20Jatri.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (544, N'Jara Biobot', N'Jara Biobot', NULL, N'https://www.amarbooks.org/thumbs/1466675145.jpg', N'6.7 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Jara%20Biobot.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (545, N'Jojo Adrisho', N'Jojo Adrisho', NULL, N'https://www.amarbooks.org/thumbs/1466836354.jpg', N'7.84 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Jojo%20Adrisho.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (546, N'Tuntuni O Chotacchu', N'Tuntuni O Chotacchu', NULL, N'https://www.amarbooks.org/thumbs/1466683493.jpg', N'3.46 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Tuntuni%20O%20Chotacchu.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (547, N'Kakababu O Shishu Chorer Dol', N'Kakababu O Shishu Chorer Dol', NULL, N'https://www.amarbooks.org/thumbs/1466838454.jpg', N'4.38 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kakababu%20O%20Shishu%20Chorer%20Dol.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (548, N'Kepler 22B', N'Kepler 22B', NULL, N'https://www.amarbooks.org/thumbs/1464944524.jpg', N'5 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Kepler%2022B.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (549, N'Cranial', N'Cranial', NULL, N'https://www.amarbooks.org/thumbs/1573563036.jpg', N'22.03 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Cranial.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (550, N'Anya Desher Kabita', N'Anya Desher Kabita', NULL, N'https://www.amarbooks.org/thumbs/1465213508.jpg', N'18.69 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Anya%20Desher%20Kabita.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (551, N'Biggani Anik Lumba', N'Biggani Anik Lumba', NULL, N'https://www.amarbooks.org/thumbs/1489221699.jpg', N'4.55 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Biggani%20Anik%20Lumba.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (552, N'Brishtir Thikana', N'Brishtir Thikana', NULL, N'https://www.amarbooks.org/thumbs/1489122042.jpg', N'15.53 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Brishtir%20Thikana.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (553, N'Aamar Swapna', N'Aamar Swapna', NULL, N'https://www.amarbooks.org/thumbs/1466824124.jpg', N'1.1 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Aamar%20Swapna.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (554, N'Phoenix', N'Phoenix', NULL, N'https://www.amarbooks.org/thumbs/1489141838.jpg', N'3.45 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Phoenix.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (555, N'Pishachini', N'Pishachini', NULL, N'https://www.amarbooks.org/thumbs/1542084345.jpg', N'10.9 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Pishachini.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (556, N'Shorger Khub Kache', N'Shorger Khub Kache', NULL, N'https://www.amarbooks.org/thumbs/1466849431.jpg', N'7.92 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Shorger%20Khub%20Kache.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (557, N'Ebar Kakababur Protishodh', N'Ebar Kakababur Protishodh', NULL, N'https://www.amarbooks.org/thumbs/1466840754.jpg', N'4.35 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Ebar%20Kakababur%20Protishodh.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (558, N'Sera Goyenda Golpo', N'Sera Goyenda Golpo', NULL, N'https://www.amarbooks.org/thumbs/1464949638.jpg', N'6.82 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sera%20Goyenda%20Golpo.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (559, N'Hotat Nirar Jonyo', N'Hotat Nirar Jonyo', NULL, N'https://www.amarbooks.org/thumbs/1465205509.jpg', N'1.09 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Hotat%20Nirar%20Jonyo.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (560, N'Dipu No-2', N'Dipu No-2', NULL, N'https://www.amarbooks.org/thumbs/1528876525.jpg', N'1.52 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Dipu%20No-2.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (561, N'Samne Arale', N'Samne Arale', NULL, N'https://www.amarbooks.org/thumbs/1466849648.jpg', N'9.93 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Samne%20Arale.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (562, N'Amra O Crab Nebula', N'Amra O Crab Nebula', NULL, N'https://www.amarbooks.org/thumbs/1489221749.jpg', N'5.7 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Amra%20O%20Crab%20Nebula.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (563, N'Rohosshomoy Vuter Golpo', N'Rohosshomoy Vuter Golpo', NULL, N'https://www.amarbooks.org/thumbs/1465205601.jpg', N'5.62 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Rohosshomoy%20Vuter%20Golpo.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (564, N'Adhunik Ishoper Golpo', N'Adhunik Ishoper Golpo', NULL, N'https://www.amarbooks.org/thumbs/1466683539.jpg', N'10.81 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Adhunik%20Ishoper%20Golpo.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (565, N'Schooler Nam Pothochari', N'Schooler Nam Pothochari', NULL, N'https://www.amarbooks.org/thumbs/1573560428.jpg', N'0.7 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Schooler%20Nam%20Pothochari.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (566, N'Robo Nishi', N'Robo Nishi', NULL, N'https://www.amarbooks.org/thumbs/1464944616.jpg', N'5.81 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Robo%20Nishi.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (567, N'Meyetir Naam Narina', N'Meyetir Naam Narina', NULL, N'https://www.amarbooks.org/thumbs/1489221609.jpg', N'6.58 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Meyetir%20Naam%20Narina.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (568, N'Rongin Choshma', N'Rongin Choshma', NULL, N'https://www.amarbooks.org/thumbs/1528877223.jpg', N'10.73 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Rongin%20Choshma.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (569, N'Mohakashe Mohatrash', N'Mohakashe Mohatrash', NULL, N'https://www.amarbooks.org/thumbs/1466670840.jpg', N'5.51 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Mohakashe%20Mohatrash.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (570, N'Kakababu Samagra Vol-4', N'Kakababu Samagra Vol-4', NULL, N'https://www.amarbooks.org/thumbs/1466761752.jpg', N'36.94 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Kakababu%20Samagra%20Vol-4.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (571, N'Sorol Jotil', N'Sorol Jotil', NULL, N'https://www.amarbooks.org/thumbs/1464949655.jpg', N'0.62 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sorol%20Jotil.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (572, N'Programmer', N'Programmer', NULL, N'https://www.amarbooks.org/thumbs/1573561127.jpg', N'0.21 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Programmer.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (573, N'Titron Ekti Groher Naam', N'Titron Ekti Groher Naam', NULL, N'https://www.amarbooks.org/thumbs/1464944668.jpg', N'11.99 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Titron%20Ekti%20Groher%20Naam.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (574, N'Jolo Manob', N'Jolo Manob', NULL, N'https://www.amarbooks.org/thumbs/1464944506.jpg', N'6.23 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Jolo%20Manob.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (575, N'Agnee Girir Peter Moddhe', N'Agnee Girir Peter Moddhe', NULL, N'https://www.amarbooks.org/thumbs/1466840684.jpg', N'3.84 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Agnee%20Girir%20Peter%20Moddhe.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (576, N'Big Bang Theke Homo Sapiens', N'Big Bang Theke Homo Sapiens', NULL, N'https://www.amarbooks.org/thumbs/1573560471.jpg', N'2.71 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Big%20Bang%20Theke%20Homo%20Sapiens.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (577, N'Project Nebula', N'Project Nebula', NULL, N'https://www.amarbooks.org/thumbs/1464944600.jpg', N'8.3 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Project%20Nebula.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (578, N'Akash Patal', N'Akash Patal', NULL, N'https://www.amarbooks.org/thumbs/1466849339.jpg', N'5.65 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Akash%20Patal.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (579, N'Labu Elo Shohoray', N'Labu Elo Shohoray', NULL, N'https://www.amarbooks.org/thumbs/1489141663.jpg', N'16.26 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Labu%20Elo%20Shohoray.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (580, N'Eeron', N'Eeron', NULL, N'https://www.amarbooks.org/thumbs/1528876781.jpg', N'8.27 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Eeron.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (581, N'Meku Kahini', N'Meku Kahini', NULL, N'https://www.amarbooks.org/thumbs/1466683326.jpg', N'1.95 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Meku%20Kahini.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (582, N'Amar Bandhu Rashed', N'Amar Bandhu Rashed', NULL, N'https://www.amarbooks.org/thumbs/1528874724.jpg', N'17.78 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Amar%20Bandhu%20Rashed.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (583, N'Purbo Paschim', N'Purbo Paschim', NULL, N'https://www.amarbooks.org/thumbs/1465208325.jpg', N'59.41 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Purbo%20Paschim.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (584, N'"Nira', N'"Nira', NULL, N'Sunil Gangopadhyay', N'"http://www.amarbooks.com/FreeDownload.php?w=Sunil', N'https://www.amarbooks.org/thumbs/1466833948.jpg', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (585, N'Andhokarer Groho', N'Andhokarer Groho', NULL, N'https://www.amarbooks.org/thumbs/1464944385.jpg', N'9.15 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Andhokarer%20Groho.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (586, N'Dekha Holo Valobasha Bedonai', N'Dekha Holo Valobasha Bedonai', NULL, N'https://www.amarbooks.org/thumbs/1466832125.jpg', N'1.05 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Dekha%20Holo%20Valobasha%20Bedonai.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (587, N'Nissongo Grohochari', N'Nissongo Grohochari', NULL, N'https://www.amarbooks.org/thumbs/1466677746.jpg', N'6.56 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Nissongo%20Grohochari.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (588, N'Darrow Sundar', N'Darrow Sundar', NULL, N'https://www.amarbooks.org/thumbs/1466834289.jpg', N'0.78 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Darrow%20Sundar.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (589, N'Abonil', N'Abonil', NULL, N'https://www.amarbooks.org/thumbs/1464944365.jpg', N'8.25 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Abonil.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (590, N'Sotero Bochor Boyese', N'Sotero Bochor Boyese', NULL, N'https://www.amarbooks.org/thumbs/1465201915.jpg', N'2.5 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Sotero%20Bochor%20Boyese.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (591, N'Nut Boltu', N'Nut Boltu', NULL, N'https://www.amarbooks.org/thumbs/1466674627.jpg', N'6.66 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Nut%20Boltu.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (592, N'Goniter Moja - Mojar Gonit-1', N'Goniter Moja - Mojar Gonit-1', NULL, N'https://www.amarbooks.org/thumbs/1466683269.jpg', N'4.24 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Goniter%20Moja%20-%20Mojar%20Gonit-1.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (593, N'Smritir Shohor', N'Smritir Shohor', NULL, N'https://www.amarbooks.org/thumbs/1466833870.jpg', N'0.8 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Smritir%20Shohor.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (594, N'Suhaner Swapno', N'Suhaner Swapno', NULL, N'https://www.amarbooks.org/thumbs/1464944634.jpg', N'4.29 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Muhammed%20Zafar%20Iqbal&f=Suhaner%20Swapno.pdf', 26, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (595, N'Dashe Dash', N'Dashe Dash', NULL, N'https://www.amarbooks.org/thumbs/1465205472.jpg', N'69.64 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Sunil%20Gangopadhyay&f=Dashe%20Dash.pdf', 18, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (596, N'Rijuda Samagra-1', N'Rijuda Samagra-1', NULL, N'https://www.amarbooks.org/thumbs/1575626808.jpg', N'17.82 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Rijuda%20Samagra-1.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (597, N'Mahuar Chithi', N'Mahuar Chithi', NULL, N'https://www.amarbooks.org/thumbs/1575614502.jpg', N'3.83 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Mahuar%20Chithi.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (598, N'Gamhardungri', N'Gamhardungri', NULL, N'https://www.amarbooks.org/thumbs/1574310765.jpg', N'5 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Gamhardungri.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (599, N'Sukher Kache', N'Sukher Kache', NULL, N'https://www.amarbooks.org/thumbs/1464941092.jpg', N'7.46 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Sukher%20Kache.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (600, N'Sanjhbelate', N'Sanjhbelate', NULL, N'https://www.amarbooks.org/thumbs/1575689786.jpg', N'5 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Sanjhbelate.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (601, N'Dhokar Dalna', N'Dhokar Dalna', NULL, N'https://www.amarbooks.org/thumbs/1464940893.jpg', N'1.13 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Dhokar%20Dalna.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (602, N'"Baja Tora', N'"Baja Tora', NULL, N'Buddhadeb Guha', N'"http://www.amarbooks.com/FreeDownload.php?w=Buddh', N'https://www.amarbooks.org/thumbs/1464940858.jpg', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (603, N'Durer Bhor', N'Durer Bhor', NULL, N'https://www.amarbooks.org/thumbs/1575607635.jpg', N'3.25 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Durer%20Bhor.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (604, N'Bhabar Samay', N'Bhabar Samay', NULL, N'https://www.amarbooks.org/thumbs/1575599430.jpg', N'5.09 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Bhabar%20Samay.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (605, N'Swapner Moto', N'Swapner Moto', NULL, N'https://www.amarbooks.org/thumbs/1464941109.jpg', N'3.76 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Swapner%20Moto.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (606, N'Soparda', N'Soparda', NULL, N'https://www.amarbooks.org/thumbs/1575691812.jpg', N'3.09 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Soparda.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (607, N'Bindus', N'Bindus', NULL, N'https://www.amarbooks.org/thumbs/1575691106.jpg', N'1.63 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Bindus.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (608, N'Nana Raser 9ti Upanyas', N'Nana Raser 9ti Upanyas', NULL, N'https://www.amarbooks.org/thumbs/1575615026.jpg', N'39.46 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Nana%20Raser%209ti%20Upanyas.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (609, N'Sudur Sokal', N'Sudur Sokal', NULL, N'https://www.amarbooks.org/thumbs/1464941070.jpg', N'0.27 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Sudur%20Sokal.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (610, N'Aranya', N'Aranya', NULL, N'https://www.amarbooks.org/thumbs/1575612765.jpg', N'3.89 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Aranya.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (611, N'Jugal Upanyas', N'Jugal Upanyas', NULL, N'https://www.amarbooks.org/thumbs/1575610288.jpg', N'6.15 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Jugal%20Upanyas.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (612, N'Ninikumarir Bagh', N'Ninikumarir Bagh', NULL, N'https://www.amarbooks.org/thumbs/1464940978.jpg', N'5.26 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Ninikumarir%20Bagh.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (613, N'"Sanjhbelate', N'"Sanjhbelate', NULL, N' Pakhira Jane"', N'https://www.amarbooks.org/thumbs/1575690642.jpg', N'Buddhadeb Guha', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (614, N'Pancha Pradip', N'Pancha Pradip', NULL, N'https://www.amarbooks.org/thumbs/1575621603.jpg', N'8.7 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Pancha%20Pradip.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (615, N'Pakhira Jane', N'Pakhira Jane', NULL, N'https://www.amarbooks.org/thumbs/1575690504.jpg', N'1.97 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Pakhira%20Jane.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (616, N'Jogmogi', N'Jogmogi', NULL, N'https://www.amarbooks.org/thumbs/1575609713.jpg', N'6.23 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Jogmogi.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (617, N'Samudra Mekhla', N'Samudra Mekhla', NULL, N'https://www.amarbooks.org/thumbs/1575627488.jpg', N'4.06 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Samudra%20Mekhla.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (618, N'Pamori', N'Pamori', NULL, N'https://www.amarbooks.org/thumbs/1574306114.jpg', N'7.98 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Pamori.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (619, N'Koyeler Kache', N'Koyeler Kache', NULL, N'https://www.amarbooks.org/thumbs/1574309746.jpg', N'8.21 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Koyeler%20Kache.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (620, N'Rijudar Songe Jongole', N'Rijudar Songe Jongole', NULL, N'https://www.amarbooks.org/thumbs/1573868723.jpg', N'0.97 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Rijudar%20Songe%20Jongole.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (621, N'Aiburo Dui Buror Galpa', N'Aiburo Dui Buror Galpa', NULL, N'https://www.amarbooks.org/thumbs/1574305592.jpg', N'2.19 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Aiburo%20Dui%20Buror%20Galpa.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (622, N'Khela Jakhan', N'Khela Jakhan', NULL, N'https://www.amarbooks.org/thumbs/1575613493.jpg', N'4.06 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Khela%20Jakhan.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (623, N'Abhilash', N'Abhilash', NULL, N'https://www.amarbooks.org/thumbs/1574304661.jpg', N'6.7 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Abhilash.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (624, N'Pujor Samaye', N'Pujor Samaye', NULL, N'https://www.amarbooks.org/thumbs/1575623023.jpg', N'5.31 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Pujor%20Samaye.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (625, N'Jaoya Asa', N'Jaoya Asa', NULL, N'https://www.amarbooks.org/thumbs/1575609095.jpg', N'3.97 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Jaoya%20Asa.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (626, N'Charaidihar Shalukphul', N'Charaidihar Shalukphul', NULL, N'https://www.amarbooks.org/thumbs/1575601292.jpg', N'1.71 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Charaidihar%20Shalukphul.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (627, N'Ribhu', N'Ribhu', NULL, N'https://www.amarbooks.org/thumbs/1575625416.jpg', N'40.66 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Ribhu.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (628, N'Jangaler Journal', N'Jangaler Journal', NULL, N'https://www.amarbooks.org/thumbs/1575608284.jpg', N'3.52 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Jangaler%20Journal.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (629, N'Jujudhan', N'Jujudhan', NULL, N'https://www.amarbooks.org/thumbs/1575613004.jpg', N'3.45 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Jujudhan.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (630, N'Duti Uponnas', N'Duti Uponnas', NULL, N'https://www.amarbooks.org/thumbs/1464940910.jpg', N'8.52 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Duti%20Uponnas.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (631, N'Amar Somoy Amar Golpo', N'Amar Somoy Amar Golpo', NULL, N'https://www.amarbooks.org/thumbs/1575598719.jpg', N'9.39 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Amar%20Somoy%20Amar%20Golpo.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (632, N'Dipita', N'Dipita', NULL, N'https://www.amarbooks.org/thumbs/1575612891.jpg', N'2.48 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Buddhadeb%20Guha&f=Dipita.pdf', 1, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (633, N'Onekei Eka', N'Onekei Eka', NULL, N'https://www.amarbooks.org/thumbs/1537674161.jpg', N'2.93 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Onekei%20Eka.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (634, N'Nikatkatha', N'Nikatkatha', NULL, N'https://www.amarbooks.org/thumbs/1574124312.jpg', N'5.29 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Nikatkatha.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (635, N'Jaalbandi', N'Jaalbandi', NULL, N'https://www.amarbooks.org/thumbs/1538186610.jpg', N'6.09 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Jaalbandi.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (636, N'Ferari', N'Ferari', NULL, N'https://www.amarbooks.org/thumbs/1535861304.jpg', N'2.43 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Ferari.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (637, N'Rajat Jayanti', N'Rajat Jayanti', NULL, N'https://www.amarbooks.org/thumbs/1538183748.jpg', N'13.11 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Rajat%20Jayanti.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (638, N'Keo Bojhe Na', N'Keo Bojhe Na', NULL, N'https://www.amarbooks.org/thumbs/1574122446.jpg', N'16.12 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Keo%20Bojhe%20Na.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (639, N'Buno Hanser Palok', N'Buno Hanser Palok', NULL, N'https://www.amarbooks.org/thumbs/1535506169.jpg', N'8.01 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Buno%20Hanser%20Palok.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (640, N'Jan Jajak', N'Jan Jajak', NULL, N'https://www.amarbooks.org/thumbs/1532091013.jpg', N'6.76 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Jan%20Jajak.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (641, N'Leela Khela', N'Leela Khela', NULL, N'https://www.amarbooks.org/thumbs/1537809464.jpg', N'7.43 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Leela%20Khela.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (642, N'Andhakarer Manush', N'Andhakarer Manush', NULL, N'https://www.amarbooks.org/thumbs/1535505963.jpg', N'6.61 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Andhakarer%20Manush.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (643, N'Curvalor Bakso', N'Curvalor Bakso', NULL, N'https://www.amarbooks.org/thumbs/1535599946.jpg', N'9.85 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Curvalor%20Bakso.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (644, N'Dai Bandhan', N'Dai Bandhan', NULL, N'https://www.amarbooks.org/thumbs/1535861439.jpg', N'4.22 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Dai%20Bandhan.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (645, N'Na Akash Na Patal', N'Na Akash Na Patal', NULL, N'https://www.amarbooks.org/thumbs/1535507747.jpg', N'7.39 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Na%20Akash%20Na%20Patal.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (646, N'Ei Ami Renu', N'Ei Ami Renu', NULL, N'https://www.amarbooks.org/thumbs/1531807538.jpg', N'5.65 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Ei%20Ami%20Renu.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (647, N'Brishtite Vejar Bayas', N'Brishtite Vejar Bayas', NULL, N'https://www.amarbooks.org/thumbs/1532090434.jpg', N'9.16 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Brishtite%20Vejar%20Bayas.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (648, N'Rong Mahal', N'Rong Mahal', NULL, N'https://www.amarbooks.org/thumbs/1535771027.jpg', N'8.84 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Rong%20Mahal.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (649, N'Shopno Shondhani', N'Shopno Shondhani', NULL, N'https://www.amarbooks.org/thumbs/1535771122.jpg', N'1.59 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Shopno%20Shondhani.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (650, N'Kanthe Pariparshwiker Mala', N'Kanthe Pariparshwiker Mala', NULL, N'https://www.amarbooks.org/thumbs/1532092083.jpg', N'8.98 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Kanthe%20Pariparshwiker%20Mala.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (651, N'Kalpurush', N'Kalpurush', NULL, N'https://www.amarbooks.org/thumbs/1582028583.jpg', N'21.52 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Kalpurush.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (652, N'Onno Rokom Vromaon', N'Onno Rokom Vromaon', NULL, N'https://www.amarbooks.org/thumbs/1574126372.jpg', N'14.13 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Onno%20Rokom%20Vromaon.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (653, N'Victoriyar Bagan', N'Victoriyar Bagan', NULL, N'https://www.amarbooks.org/thumbs/1535592857.jpg', N'4.04 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Victoriyar%20Bagan.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (654, N'Khorar Pore Brishti', N'Khorar Pore Brishti', NULL, N'https://www.amarbooks.org/thumbs/1535770086.jpg', N'0.55 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Khorar%20Pore%20Brishti.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (655, N'Bhagabaner Bhaibon', N'Bhagabaner Bhaibon', NULL, N'https://www.amarbooks.org/thumbs/1532090357.jpg', N'5.22 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Bhagabaner%20Bhaibon.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (656, N'Chhaya Purbagamini', N'Chhaya Purbagamini', NULL, N'https://www.amarbooks.org/thumbs/1535506925.jpg', N'4.45 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Chhaya%20Purbagamini.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (657, N'Shreshtha Galpo', N'Shreshtha Galpo', NULL, N'https://www.amarbooks.org/thumbs/1535504336.jpg', N'15.44 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Shreshtha%20Galpo.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (658, N'Honey Moon-e Jemon', N'Honey Moon-e Jemon', NULL, N'https://www.amarbooks.org/thumbs/1535769960.jpg', N'0.71 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Honey%20Moon-e%20Jemon.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (659, N'Saoyar', N'Saoyar', NULL, N'https://www.amarbooks.org/thumbs/1535863385.jpg', N'3.46 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Saoyar.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (660, N'Jutoy Rokter Daag', N'Jutoy Rokter Daag', NULL, N'https://www.amarbooks.org/thumbs/1532091824.jpg', N'7.27 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Jutoy%20Rokter%20Daag.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (661, N'Moner Moto Mon', N'Moner Moto Mon', NULL, N'https://www.amarbooks.org/thumbs/1535598884.jpg', N'14.32 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Moner%20Moto%20Mon.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (662, N'Oishorjo', N'Oishorjo', NULL, N'https://www.amarbooks.org/thumbs/1537674122.jpg', N'2.38 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Oishorjo.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (663, N'Kulkundolini', N'Kulkundolini', NULL, N'https://www.amarbooks.org/thumbs/1538184715.jpg', N'7.25 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Kulkundolini.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (664, N'Agnirath', N'Agnirath', NULL, N'https://www.amarbooks.org/thumbs/1532090081.jpg', N'19.61 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Agnirath.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (665, N'Ani', N'Ani', NULL, N'https://www.amarbooks.org/thumbs/1574122332.jpg', N'8.26 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Ani.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (666, N'Janani Debi', N'Janani Debi', NULL, N'https://www.amarbooks.org/thumbs/1531810766.jpg', N'5.76 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Janani%20Debi.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (667, N'Jajabori', N'Jajabori', NULL, N'https://www.amarbooks.org/thumbs/1535861177.jpg', N'14.43 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Jajabori.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (668, N'Ayna Bhenge Gele', N'Ayna Bhenge Gele', NULL, N'https://www.amarbooks.org/thumbs/1574122943.jpg', N'2.14 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Ayna%20Bhenge%20Gele.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (669, N'Josnay Borsar Megh', N'Josnay Borsar Megh', NULL, N'https://www.amarbooks.org/thumbs/1535861133.jpg', N'3.74 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Josnay%20Borsar%20Megh.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (670, N'Singhabahini', N'Singhabahini', NULL, N'https://www.amarbooks.org/thumbs/1531806394.jpg', N'4.31 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Singhabahini.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (671, N'Naukabilash', N'Naukabilash', NULL, N'https://www.amarbooks.org/thumbs/1538183728.jpg', N'5.13 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Naukabilash.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (672, N'Eto Rakta Keno', N'Eto Rakta Keno', NULL, N'https://www.amarbooks.org/thumbs/1531808972.jpg', N'5.41 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Eto%20Rakta%20Keno.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (673, N'Hridoyboti', N'Hridoyboti', NULL, N'https://www.amarbooks.org/thumbs/1535861265.jpg', N'2.81 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Hridoyboti.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (674, N'Lakshmir Panchali', N'Lakshmir Panchali', NULL, N'https://www.amarbooks.org/thumbs/1535592780.jpg', N'3.39 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Lakshmir%20Panchali.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (675, N'Shobder Aral', N'Shobder Aral', NULL, N'https://www.amarbooks.org/thumbs/1537674210.jpg', N'2.89 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Shobder%20Aral.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (676, N'Akasher Arale Akash', N'Akasher Arale Akash', NULL, N'https://www.amarbooks.org/thumbs/1535505847.jpg', N'9.24 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Akasher%20Arale%20Akash.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (677, N'Bipul Nikot', N'Bipul Nikot', NULL, N'https://www.amarbooks.org/thumbs/1537673973.jpg', N'4.92 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Bipul%20Nikot.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (678, N'Golpo Gacha', N'Golpo Gacha', NULL, N'https://www.amarbooks.org/thumbs/1535769816.jpg', N'1.1 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Golpo%20Gacha.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (679, N'Mudravangha', N'Mudravangha', NULL, N'https://www.amarbooks.org/thumbs/1537674018.jpg', N'4.59 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Mudravangha.pdf', 20, NULL)
+GO
+INSERT [dbo].[Books] ([Id], [Name], [DisplayName], [Description], [Thumbnails], [DownloadSize], [DownloadLink], [CategoryId], [Status]) VALUES (680, N'Utsarito Alo', N'Utsarito Alo', NULL, N'https://www.amarbooks.org/thumbs/1574123738.jpg', N'7.66 MB
+', N'http://www.amarbooks.com/FreeDownload.php?w=Samaresh%20Majumdar&f=Utsarito%20Alo.pdf', 20, NULL)
+GO
 INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (1, N'Bani Basu', NULL, NULL)
 GO
 INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (2, N'Bibhutibhushan Bandopadhyay', NULL, NULL)
@@ -1693,9 +2217,19 @@ INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (31, N'Le
 GO
 INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (32, N'Life History', NULL, NULL)
 GO
+INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (33, N' Kakababu Kothay"', NULL, NULL)
+GO
+INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (34, N' Hariye Jeo Na"', NULL, NULL)
+GO
+INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (35, N'Buddhadeb Guha', NULL, NULL)
+GO
+INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (36, N' Raja Jay"', NULL, NULL)
+GO
+INSERT [dbo].[Category] ([Id], [Name], [Description], [Status]) VALUES (37, N' Bindus', NULL, NULL)
+GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_Books]    Script Date: 1/27/2021 5:23:37 PM ******/
+/****** Object:  Index [IX_Books]    Script Date: 1/27/2021 5:52:37 PM ******/
 CREATE UNIQUE NONCLUSTERED INDEX [IX_Books] ON [dbo].[Books]
 (
 	[Name] ASC
@@ -1706,7 +2240,7 @@ REFERENCES [dbo].[Category] ([Id])
 GO
 ALTER TABLE [dbo].[Books] CHECK CONSTRAINT [FK_Books_Category]
 GO
-/****** Object:  StoredProcedure [dbo].[sp_Get_AllCategory]    Script Date: 1/27/2021 5:23:37 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_Get_AllCategory]    Script Date: 1/27/2021 5:52:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1730,7 +2264,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_In_Books]    Script Date: 1/27/2021 5:23:37 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_In_Books]    Script Date: 1/27/2021 5:52:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1779,7 +2313,7 @@ BEGIN
 
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_In_Category]    Script Date: 1/27/2021 5:23:37 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_In_Category]    Script Date: 1/27/2021 5:52:37 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

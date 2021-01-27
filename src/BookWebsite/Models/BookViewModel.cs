@@ -10,6 +10,7 @@
         public string DownloadSize { get; set; }
         public string DownloadLink { get; set; }
         public string CategoryId { get; set; }
+        public string Price { get; set; }
         public string Status { get; set; }
     }
 }
