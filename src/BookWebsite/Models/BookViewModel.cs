@@ -12,5 +12,7 @@
         public string CategoryId { get; set; }
         public string Price { get; set; }
         public string Status { get; set; }
+        public string LikeCount { get; set; }
+        public string DislikeCount { get; set; }
     }
 }

@@ -5,8 +5,6 @@ using GlobalEntities.Variables;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
 using static GlobalEntities.Enums.GlobalEnums;
 
 namespace BookWebsite.Repository
@@ -84,7 +82,6 @@ namespace BookWebsite.Repository
             }
 
         }
-
         public CommonResponse AddCategory(CategoryViewModel categoryView)
         {
 
