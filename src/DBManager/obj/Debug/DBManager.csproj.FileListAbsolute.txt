@@ -213,6 +213,7 @@ C:\Users\Dell\source\repos\BookSolution\src\DBManager\bin\Debug\DBManager.pdb
 C:\Users\Dell\source\repos\BookSolution\src\DBManager\bin\Debug\GlobalEntities.dll
 C:\Users\Dell\source\repos\BookSolution\src\DBManager\bin\Debug\GlobalEntities.pdb
 C:\Users\Dell\source\repos\BookSolution\src\DBManager\obj\Debug\DBManager.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\BookSolution\src\DBManager\obj\Debug\DBManager.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\BookSolution\src\DBManager\obj\Debug\DBManager.csproj.CopyComplete
 C:\Users\Dell\source\repos\BookSolution\src\DBManager\obj\Debug\DBManager.dll
 C:\Users\Dell\source\repos\BookSolution\src\DBManager\obj\Debug\DBManager.pdb

@@ -12,11 +12,13 @@ namespace BookWebsite.Controllers
     public class ParserController : ApiController
     {
         [HttpPost]
-        public CommonResponse Post(CommonRequest commonRequest)
+        [Authorize]
+        [Route("AuthorizedPost")]
+        public CommonResponse AuthorizedPost(CommonRequest commonRequest)
         {
 
             CommonResponse commonResponse = new CommonResponse();
-            commonResponse.ResponseCode = (int)ResponseCode.OperationFailed;
+            commonResponse.ResponseCode = (int)ResponseCode.NoAction;
             commonResponse.ResponseMsg = RespMessage.NoAction;
             commonResponse.ResponseUserMsg = RespMessage.NoAction;
 
@@ -26,26 +28,7 @@ namespace BookWebsite.Controllers
             switch (Int64.Parse(commonRequest.Mti))
             {
                 #region User
-                case (int)MTI.UserRegister:
-                    try
-                    {
-                        UsersRegistrationViewModel usersRegistrationViewModel = JsonConvert.DeserializeObject<UsersRegistrationViewModel>(commonRequest.Data);
-                        return new UsersRepository().UserRegister(usersRegistrationViewModel);
-                    }
-                    catch
-                    {
-                        return commonResponse;
-                    }
-                case (int)MTI.UserLogin:
-                    try
-                    {
-                        UsersLoginViewModel usersLoginViewModel = JsonConvert.DeserializeObject<UsersLoginViewModel>(commonRequest.Data);
-                        return new UsersRepository().UserLogin(usersLoginViewModel);
-                    }
-                    catch
-                    {
-                        return commonResponse;
-                    }
+                
                 case (int)MTI.UpdateUserProfile:
                     try
                     {
@@ -66,16 +49,7 @@ namespace BookWebsite.Controllers
                     {
                         return commonResponse;
                     }
-                case (int)MTI.ForgetPassword:
-                    try
-                    {
-                        UsersForgetPasswordViewModel forgetPasswordViewModel = JsonConvert.DeserializeObject<UsersForgetPasswordViewModel>(commonRequest.Data);
-                        return new UsersRepository().ForgetPassword(forgetPasswordViewModel);
-                    }
-                    catch
-                    {
-                        return commonResponse;
-                    }
+                
                 case (int)MTI.UpdatePassword:
                     try
                     {
@@ -179,6 +153,58 @@ namespace BookWebsite.Controllers
                 #endregion
                 
 
+                default:
+                    return commonResponse;
+            }
+
+
+        }
+
+        [HttpPost]
+        [Route("UnAuthorizedPost")]
+        public CommonResponse UnAuthorizedPost(CommonRequest commonRequest)
+        {
+
+            CommonResponse commonResponse = new CommonResponse();
+            commonResponse.ResponseCode = (int)ResponseCode.NoAction;
+            commonResponse.ResponseMsg = RespMessage.NoAction;
+            commonResponse.ResponseUserMsg = RespMessage.NoAction;
+
+
+            if (string.IsNullOrEmpty(commonRequest.Mti) || string.IsNullOrEmpty(commonRequest.Mti)) return commonResponse;
+
+            switch (Int64.Parse(commonRequest.Mti))
+            {
+                case (int)MTI.UserRegister:
+                    try
+                    {
+                        UsersRegistrationViewModel usersRegistrationViewModel = JsonConvert.DeserializeObject<UsersRegistrationViewModel>(commonRequest.Data);
+                        return new UsersRepository().UserRegister(usersRegistrationViewModel);
+                    }
+                    catch
+                    {
+                        return commonResponse;
+                    }
+                case (int)MTI.UserLogin:
+                    try
+                    {
+                        UsersLoginViewModel usersLoginViewModel = JsonConvert.DeserializeObject<UsersLoginViewModel>(commonRequest.Data);
+                        return new UsersRepository().UserLogin(usersLoginViewModel);
+                    }
+                    catch
+                    {
+                        return commonResponse;
+                    }
+                case (int)MTI.ForgetPassword:
+                    try
+                    {
+                        UsersForgetPasswordViewModel forgetPasswordViewModel = JsonConvert.DeserializeObject<UsersForgetPasswordViewModel>(commonRequest.Data);
+                        return new UsersRepository().ForgetPassword(forgetPasswordViewModel);
+                    }
+                    catch
+                    {
+                        return commonResponse;
+                    }
                 default:
                     return commonResponse;
             }

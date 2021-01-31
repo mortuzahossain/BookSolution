@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.IO;
+using System.Net;
+using System.Net.Http;
 using BookWebsite.Interfaces;
 using BookWebsite.Models;
 using DBManager;
 using GlobalEntities.Entities;
 using GlobalEntities.Methods;
 using GlobalEntities.Variables;
+using Newtonsoft.Json;
 using static GlobalEntities.Enums.GlobalEnums;
 
 namespace BookWebsite.Repository
@@ -206,6 +211,8 @@ namespace BookWebsite.Repository
 
                         }
 
+                        Token token = JsonConvert.DeserializeObject<Token>(GetToken(ConfigurationManager.AppSettings["UserName"], ConfigurationManager.AppSettings["Password"]));
+                        model.UserToken = token.access_token;
                         return new CommonResponse
                         {
                             ResponseCode = (int)ResponseCode.Success,
@@ -284,6 +291,33 @@ namespace BookWebsite.Repository
                     ResponseUserMsg = RespMessage.MenuItemAddSuccess
                 };
             }
+        }
+
+        public string GetToken(string userName, string password)
+        {
+            var pairs = new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>( "grant_type", "password" ),
+                new KeyValuePair<string, string>( "Username", userName ),
+                new KeyValuePair<string, string> ( "Password", password )
+            };
+            var content = new FormUrlEncodedContent(pairs);
+            ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
+            using (var client = new HttpClient())
+            {
+                var response = client.PostAsync(ConfigurationManager.AppSettings["ApplicationUrl"] + "Token", content).Result;
+                return response.Content.ReadAsStringAsync().Result;
+            }
+        }
+
+        public class Token
+        {
+            public string access_token { get; set; }
+            public string token_type { get; set; }
+            public int expires_in { get; set; }
+            public string userName { get; set; }
+            public string issued { get; set; }
+            public string expires { get; set; }
         }
     }
 }

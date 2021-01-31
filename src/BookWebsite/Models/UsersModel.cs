@@ -12,6 +12,7 @@ namespace BookWebsite.Models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Images { get; set; }
+        public string UserToken { get; set; }
     }
 
 }
