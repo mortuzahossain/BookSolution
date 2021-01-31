@@ -10,6 +10,6 @@ namespace BookWebsite.Interfaces
         CommonResponse UserLogin(UsersLoginViewModel usersLoginViewModel);
         CommonResponse UploadUsersImage(UsersImageUploadViewModel usersImageUploadViewModel);
         CommonResponse ForgetPassword(UsersForgetPasswordViewModel usersForgetPasswordViewModel);
-        CommonResponse UpdatePassword(UsersForgetPasswordViewModel usersForgetPasswordViewModel);
+        CommonResponse UpdatePassword(string userId, string password);
     }
 }

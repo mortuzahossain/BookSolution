@@ -21,8 +21,22 @@ namespace GlobalEntities.Enums
        
         public enum MTI
         {
-            GetToken = 1
-            
+            GetToken = 1,
+            UserRegister = 2,
+            UserLogin = 3,
+            UpdateUserProfile = 4,
+            UploadUsersImage = 5,
+            ForgetPassword = 6,
+            UpdatePassword = 7,
+            GetAllCategory = 8,
+            GetBooksByCategoryId = 9,
+            GetTopBooks = 10,
+            GetBookDetails = 11,
+            LikeDislikeBook = 12,
+            DownloadBookByUser = 13,
+            FaviourateBookByUser = 14,
+            GetFaviourateBooksOfUser = 15,
+            SearchBooks = 16
         }
 
         public enum ResponseCode
@@ -58,7 +72,7 @@ namespace GlobalEntities.Enums
 
 
         #region Response Message
-        public static class ResponseMessage
+        public static class RespMessage
         {
             public const string NoAction = "No Action";
             public const string Success = "Operation Success";

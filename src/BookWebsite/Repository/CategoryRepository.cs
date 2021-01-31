@@ -42,8 +42,8 @@ namespace BookWebsite.Repository
                         return new CommonResponse
                         {
                             ResponseCode = (int)ResponseCode.Success,
-                            ResponseMsg = ResponseMessage.Success,
-                            ResponseUserMsg = ResponseMessage.GetMenuCategorySuccess,
+                            ResponseMsg = RespMessage.Success,
+                            ResponseUserMsg = RespMessage.GetMenuCategorySuccess,
                             ResponseData = models
                         };
 
@@ -54,7 +54,7 @@ namespace BookWebsite.Repository
                         {
                             ResponseCode = (int)ResponseCode.OperationFailed,
                             ResponseMsg = "Failed to get menu categoty.",
-                            ResponseUserMsg = ResponseMessage.GetMenuCategoryFailed
+                            ResponseUserMsg = RespMessage.GetMenuCategoryFailed
                         };
 
                     }
@@ -65,7 +65,7 @@ namespace BookWebsite.Repository
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Failed to get menu categoty.",
-                        ResponseUserMsg = ResponseMessage.GetMenuCategoryFailed
+                        ResponseUserMsg = RespMessage.GetMenuCategoryFailed
                     };
                 }
 
@@ -77,7 +77,7 @@ namespace BookWebsite.Repository
                 {
                     ResponseCode = (int)ResponseCode.OperationFailed,
                     ResponseMsg = exception.Message,
-                    ResponseUserMsg = ResponseMessage.GetMenuCategoryFailed
+                    ResponseUserMsg = RespMessage.GetMenuCategoryFailed
                 };
             }
 
@@ -94,9 +94,9 @@ namespace BookWebsite.Repository
                     return new CommonResponse
                     {
                         ResponseCode = (int)ResponseCode.Success,
-                        ResponseMsg = ResponseMessage.Success,
+                        ResponseMsg = RespMessage.Success,
                         ResponseData = response.ToString(),
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
                 else
@@ -105,7 +105,7 @@ namespace BookWebsite.Repository
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Failed to add menu veriants.",
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
 
@@ -116,7 +116,7 @@ namespace BookWebsite.Repository
                 {
                     ResponseCode = (int)ResponseCode.OperationFailed,
                     ResponseMsg = exception.Message,
-                    ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                    ResponseUserMsg = RespMessage.MenuItemAddSuccess
                 };
             }
 

@@ -50,8 +50,8 @@ namespace GlobalEntities.Methods
                         return new CommonResponse
                         {
                             ResponseCode = (int) ResponseCode.Success,
-                            ResponseMsg = ResponseMessage.Success,
-                            ResponseUserMsg = ResponseMessage.MailSendSuccess
+                            ResponseMsg = RespMessage.Success,
+                            ResponseUserMsg = RespMessage.MailSendSuccess
                         };
                     }
                     catch (Exception ex)
@@ -61,7 +61,7 @@ namespace GlobalEntities.Methods
                             ResponseCode = (int)ResponseCode.OperationFailed,
                             ResponseMsg = "Failed to send mail : Response from Host(" + hostIp + "):" +
                                           ex.InnerException,
-                            ResponseUserMsg = ResponseMessage.MailSendFailed
+                            ResponseUserMsg = RespMessage.MailSendFailed
                         };
                     }
                 }
@@ -71,7 +71,7 @@ namespace GlobalEntities.Methods
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Mail setting not configured yet.",
-                        ResponseUserMsg = ResponseMessage.MailSendFailed
+                        ResponseUserMsg = RespMessage.MailSendFailed
                     };
                 }
             }
@@ -81,7 +81,7 @@ namespace GlobalEntities.Methods
                 {
                     ResponseCode = (int)ResponseCode.OperationFailed,
                     ResponseMsg = "Failed to send mail. Error:" + exx.Message,
-                    ResponseUserMsg = ResponseMessage.MailSendFailed
+                    ResponseUserMsg = RespMessage.MailSendFailed
                 };
             }
         }

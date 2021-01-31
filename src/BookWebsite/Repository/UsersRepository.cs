@@ -15,12 +15,76 @@ namespace BookWebsite.Repository
     {
         public CommonResponse ForgetPassword(UsersForgetPasswordViewModel usersForgetPasswordViewModel)
         {
-            throw new NotImplementedException();
+            CommonResponse commonResponse = new CommonResponse();
+
+            try
+            {
+                string errMsg = string.Empty;
+                int userId = new ProcedureManager(DBName.BookDb, ref errMsg).ExecuteNonQuery(ExecutionSP.sp_Get_UserByEmailId, ref errMsg, usersForgetPasswordViewModel.EmailAddress);
+                if (userId == 0)
+                {
+                    commonResponse.ResponseCode = (int)ResponseCode.OperationFailed;
+                    commonResponse.ResponseMsg = "";
+                    commonResponse.ResponseUserMsg = "";
+                    return commonResponse;
+                }
+
+                string passwordPlain = SecurityUtility.RandomString(8);
+                string password = SecurityUtility.Hash(passwordPlain);
+                commonResponse = UpdatePassword(userId.ToString(), password);
+                if (commonResponse.ResponseCode == (int)ResponseCode.Success)
+                {
+                    string subject = "FreeBook Login Credentials";
+                    string content = "Your login credential:" + Environment.NewLine + "Login Id: [loginid]" + Environment.NewLine + "Password: [password]" + Environment.NewLine + "Regards" + Environment.NewLine + "Flora Systems ltd";
+                    content = content.Replace("[loginid]", usersForgetPasswordViewModel.EmailAddress);
+                    content = content.Replace("[password]", passwordPlain);
+                    commonResponse = GeneralUtility.SendMail(usersForgetPasswordViewModel.EmailAddress, subject, content);
+                }
+
+
+            }
+            catch (Exception exception)
+            {
+                commonResponse.ResponseCode = (int)ResponseCode.OperationFailed;
+                commonResponse.ResponseMsg = exception.Message;
+            }
+
+            return commonResponse;
         }
 
-        public CommonResponse UpdatePassword(UsersForgetPasswordViewModel usersForgetPasswordViewModel)
+        public CommonResponse UpdatePassword(string userId, string password)
         {
-            throw new NotImplementedException();
+            try
+            {
+                string errMsg = string.Empty;
+                int response = new ProcedureManager(DBName.BookDb, ref errMsg).ExecuteNonQuery(ExecutionSP.sp_Up_UsersPassword, ref errMsg, userId, password);
+                if (response != 0)
+                {
+                    return new CommonResponse
+                    {
+                        ResponseCode = (int)ResponseCode.Success,
+                        ResponseMsg = RespMessage.Success,
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
+                    };
+                }
+
+                return new CommonResponse
+                {
+                    ResponseCode = (int)ResponseCode.OperationFailed,
+                    ResponseMsg = "Failed to add menu veriants.",
+                    ResponseUserMsg = RespMessage.MenuItemAddSuccess
+                };
+
+            }
+            catch (Exception exception)
+            {
+                return new CommonResponse
+                {
+                    ResponseCode = (int)ResponseCode.OperationFailed,
+                    ResponseMsg = exception.Message,
+                    ResponseUserMsg = RespMessage.MenuItemAddSuccess
+                };
+            }
         }
 
         public CommonResponse UpdateUserProfile(UsersRegistrationViewModel usersRegistrationViewModel)
@@ -34,8 +98,8 @@ namespace BookWebsite.Repository
                     return new CommonResponse
                     {
                         ResponseCode = (int)ResponseCode.Success,
-                        ResponseMsg = ResponseMessage.Success,
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseMsg = RespMessage.Success,
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
                 else
@@ -44,7 +108,7 @@ namespace BookWebsite.Repository
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Failed to add menu veriants.",
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
 
@@ -55,7 +119,7 @@ namespace BookWebsite.Repository
                 {
                     ResponseCode = (int)ResponseCode.OperationFailed,
                     ResponseMsg = exception.Message,
-                    ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                    ResponseUserMsg = RespMessage.MenuItemAddSuccess
                 };
             }
         }
@@ -79,7 +143,7 @@ namespace BookWebsite.Repository
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Failed to add menu veriants.",
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
 
@@ -89,8 +153,8 @@ namespace BookWebsite.Repository
                     return new CommonResponse
                     {
                         ResponseCode = (int)ResponseCode.Success,
-                        ResponseMsg = ResponseMessage.Success,
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseMsg = RespMessage.Success,
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
                 else
@@ -99,7 +163,7 @@ namespace BookWebsite.Repository
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Failed to add menu veriants.",
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
 
@@ -110,7 +174,7 @@ namespace BookWebsite.Repository
                 {
                     ResponseCode = (int)ResponseCode.OperationFailed,
                     ResponseMsg = exception.Message,
-                    ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                    ResponseUserMsg = RespMessage.MenuItemAddSuccess
                 };
             } 
         }
@@ -145,8 +209,8 @@ namespace BookWebsite.Repository
                         return new CommonResponse
                         {
                             ResponseCode = (int)ResponseCode.Success,
-                            ResponseMsg = ResponseMessage.Success,
-                            ResponseUserMsg = ResponseMessage.GetMenuCategorySuccess,
+                            ResponseMsg = RespMessage.Success,
+                            ResponseUserMsg = RespMessage.GetMenuCategorySuccess,
                             ResponseData = model
                         };
 
@@ -157,7 +221,7 @@ namespace BookWebsite.Repository
                         {
                             ResponseCode = (int)ResponseCode.OperationFailed,
                             ResponseMsg = "Failed to get menu categoty.",
-                            ResponseUserMsg = ResponseMessage.GetMenuCategoryFailed
+                            ResponseUserMsg = RespMessage.GetMenuCategoryFailed
                         };
 
                     }
@@ -168,7 +232,7 @@ namespace BookWebsite.Repository
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Failed to get menu categoty.",
-                        ResponseUserMsg = ResponseMessage.GetMenuCategoryFailed
+                        ResponseUserMsg = RespMessage.GetMenuCategoryFailed
                     };
                 }
 
@@ -180,7 +244,7 @@ namespace BookWebsite.Repository
                 {
                     ResponseCode = (int)ResponseCode.OperationFailed,
                     ResponseMsg = exception.Message,
-                    ResponseUserMsg = ResponseMessage.GetMenuCategoryFailed
+                    ResponseUserMsg = RespMessage.GetMenuCategoryFailed
                 };
             }
         }
@@ -196,8 +260,8 @@ namespace BookWebsite.Repository
                     return new CommonResponse
                     {
                         ResponseCode = (int)ResponseCode.Success,
-                        ResponseMsg = ResponseMessage.Success,
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseMsg = RespMessage.Success,
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
                 else
@@ -206,7 +270,7 @@ namespace BookWebsite.Repository
                     {
                         ResponseCode = (int)ResponseCode.OperationFailed,
                         ResponseMsg = "Failed to add menu veriants.",
-                        ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                        ResponseUserMsg = RespMessage.MenuItemAddSuccess
                     };
                 }
 
@@ -217,7 +281,7 @@ namespace BookWebsite.Repository
                 {
                     ResponseCode = (int)ResponseCode.OperationFailed,
                     ResponseMsg = exception.Message,
-                    ResponseUserMsg = ResponseMessage.MenuItemAddSuccess
+                    ResponseUserMsg = RespMessage.MenuItemAddSuccess
                 };
             }
         }

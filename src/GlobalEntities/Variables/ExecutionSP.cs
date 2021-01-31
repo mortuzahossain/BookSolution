@@ -23,6 +23,9 @@ namespace GlobalEntities.Variables
         public const string sp_Get_UserProfileForLogin = "sp_Get_UserProfileForLogin";
         public const string sp_In_UpdateUserImage = "sp_In_UpdateUserImage";
         public const string sp_Up_Users = "sp_Up_Users";
+        public const string sp_Get_UserByEmailId = "sp_Get_UserByEmailId";
+        public const string sp_Up_UsersPassword = "sp_Up_UsersPassword";
+        public const string sp_Get_BooksUsingSearch = "sp_Get_BooksUsingSearch";
 
     }
 }
